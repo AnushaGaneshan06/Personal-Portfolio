@@ -1,0 +1,446 @@
+body {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(10, 10, 19);
+    color: white;
+    overflow-x: hidden;
+    width: 100%;
+
+
+}
+
+.slide-bar {
+    position: fixed;
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #3d3c3c #2a2626;
+    /* ----scroll bar---------  */
+    background-color: rgba(12, 60, 70, 0.397);
+    text-align: center;
+}
+
+
+.pro-img img {
+    width: 50%;
+    border-radius: 50%;
+
+}
+
+nav {
+    font-family: 'Courier New',
+        Courier,
+        monospace;
+}
+
+.nav-hero ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-hero ul li {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.nav-hero2 ul {
+    text-align: start;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.nav-hero2 ul li a i {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.nav-hero2 ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.nav-hero2 ul li {
+    margin-top: 30px;
+}
+
+/* -----------------------main page--------------------------------------------------------- */
+
+
+main {
+    position: absolute;
+    margin-left: 25%;
+    width: 74%;
+}
+
+.main-img img {
+    opacity: 8%;
+    height: 100vh;
+    width: 100%;
+}
+
+.text-auto {
+    position: absolute;
+    top: 5%;
+    left: 33%;
+}
+
+.text-auto h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.text-auto h4 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.main-btn {
+    margin-top: 30px;
+    margin-left: 40px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(13, 189, 216);
+
+
+}
+
+.main-btn a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+
+}
+
+/* ----------animations-------------- */
+.main-btn:hover {
+    background-color: rgb(10, 241, 241);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-auto h1,
+.text-auto h4,
+.text-auto .main-btn {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+.text-auto h4:nth-child(1) {
+    animation-delay: 0.5s;
+    /* Delay for the first h1 */
+}
+
+.text-auto h1:nth-child(2) {
+    animation-delay: 1s;
+    /* Delay for the second h1 */
+}
+
+.text-auto #main-title {
+    animation-delay: 1.5s;
+    /* Delay for h4 */
+}
+
+.text-auto .main-btn {
+    animation-delay: 2s;
+    /* Delay for buttons */
+}
+
+/* ----------------------------------------------------------ABOUT PAGE-------------------------------------------------- */
+.about-page {
+    margin-top: 10px;
+    height: 100vh;
+}
+
+.about-img {
+    margin-top: 40px;
+    border-radius: 20px;
+    margin-left: 80px;
+}
+
+.text-about {
+    border: 0.6px solid rgb(70, 84, 84);
+    border-radius: 20px 2px;
+    margin-left: 25%;
+    height: 200px;
+    width: 500px;
+    margin-top: 20px;
+    padding: 10px;
+    line-height: 1.9;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.info h4 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+
+/* ------------ */
+/* Keyframes for fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial states for animation */
+.about-img,
+.text-about,
+.info {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.about-img {
+    transform: translateX(-50%);
+}
+
+.info {
+    transform: translateX(50%);
+}
+
+.text-about {
+    transform: translateY(20px);
+}
+
+/* ------------------------------------------------resume page-------------------------------------------------- */
+article {
+    padding: 10px;
+    margin-top: 25%;
+    height: auto;
+    width: 70%;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.round {
+    border: 1px solid;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+.vertical-line {
+    border-left: 2px solid;
+    height: 240px;
+    margin-left: 40px;
+}
+
+/* ---------skills-------------- */
+.skill {
+    margin-bottom: 20px;
+    margin-left: 70px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+    width: 0;
+    background-color: rgb(71, 212, 212);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* ----------------------------------------------------------online profile--------------------------------------------- */
+.profile {
+    position: absolute;
+    /* left: 10%; */
+    top: 95%;
+    margin-left: 11%;
+    font-size: 80px;
+    transform: scale(1);
+    transition: transform 1s ease-out;
+
+}
+
+
+
+.profile-h4 {
+    text-align: center;
+    margin-left: 10%;
+    font-size: 19px;
+    top: 99%;
+    position: absolute;
+    transform: scale(1);
+    transition: transform 1s ease-in-out;
+    color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile:hover {
+    transform: scale(1.2);
+}
+
+/* -------------------------------------------------------PROJECT PAGE-------------------------------------------------- */
+.educ {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.educ img {
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+
+.educ:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.3);
+}
+
+.educ .hover-text {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    color: white;
+    opacity: 0;
+
+}
+
+.educ:hover .hover-text {
+    opacity: 1;
+    font-size: 25px;
+    color: white;
+}
+
+/* ---------------------------------------------------SERVICES---------------------------------------------------------- */
+contact {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+}
+
+.contact-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    margin-left: 20px;
+    padding: 10px;
+    border: 2px solid rgba(12, 39, 39, 0.347);
+    border-radius: 20px 30px;
+
+}
+
+.line a i {
+    border: 2px solid gray;
+    margin-left: 40px;
+    padding: 9px;
+    border-radius: 50%;
+
+}
+
+.line p {
+    margin-left: 10px;
+    font-size: 20px;
+    color: aqua;
+}
+
+.line a i:hover {
+    color: black;
+    background-color: aqua;
+
+}
+
+
+.left address {
+    margin-left: 80px;
+}
+
+iframe {
+    height: 30px;
+}
+
+/* --------------------------------------------------------forms-------------------------------------------------- */
+.right {
+    padding: 10px;
+    margin-left: 10%;
+    line-height: 3.5;
+    border: 2px solid rgba(12, 39, 39, 0.347);
+    border-radius: 20px 30px;
+
+}
+
+input {
+    background-color: #10121276;
+    border: 1px solid gray;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    width: 90%;
+    margin: 10px;
+    color: white;
+}
+
+textarea {
+    background-color: #1f252576;
+    height: 150px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 10px;
+    color: white;
+}
+
+footer {
+    position: absolute;
+    /* margin-left: 1%; */
+    margin-top: 190%;
+    background-color: #042124;
+    padding: 10px;
+    width: 110%;
+}
+
+footer h6 {
+    text-align: center;
+}
